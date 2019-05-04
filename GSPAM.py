@@ -1,18 +1,16 @@
 import smtplib
 import getpass
 import time
-import bomb
 
-
-print("If Your Using this just to spam i suggest making a new account and un enabling the safety feature for it to work.\n")
 
 ENDC = '\033[m'
 TCYAN =  '\033[36m'
 TYELL = '\033[33m'
+TRED = '\033[31m'
 print(TCYAN + "[*] Welcome To SheZco's Gspammer", ENDC)
-print(TYELL + "[*] Please Use For Educational Purposes only")
+print(TRED + "[*] Please Use For Educational Purposes only")
 
-print('''              . . .
+print('''             . . .
               \|/
             `--+--'
               /|/
@@ -62,7 +60,7 @@ while True:
     try:
         counter += 1
         server.sendmail(user, target, subj, msg)
-        print("Succesfully sent %s " % counter)
+        print(TYELL + "Succesfully sent %s " % counter)
     except:
-        print("Cant send or sent enough and restarting, manuel restart me")
+        print("Cant send")
         quit()
