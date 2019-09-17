@@ -59,7 +59,7 @@ msg = input("[?] Message: ")
 while True:
     try:
         counter += 1
-        server.sendmail(user, target, subj, msg)
+        server.sendmail(user, target, msg, subj)
         print(TYELL + "Succesfully sent %s " % counter)
     except:
         print("Cant send")
